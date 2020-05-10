@@ -1,3 +1,10 @@
+Personal Web Page
+=================
+
+**Task:** Create a personal web page utilizing the HTML and CSS skills learned from the first four lessons on Khan Academy.
+
+Here is my code:
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,3 +71,6 @@ table, th, td {
 
 </body>
 </html>
+```
+
+Here is a photo:
