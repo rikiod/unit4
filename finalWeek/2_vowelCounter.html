@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang=>
+<head>
+    <meta charset="UTF-8">
+    <title>Vowel Counter</title>
+</head>
+<body>
+<h1>
+    Vowel Counter
+</h1>
+<p>Enter a sentence below.</p>
+<label for="usweInput">Input:</label><br>
+<input type="text" id="userInput">
+<button type="button" onclick="countVowels();">Submit</button>
+<div id = "output"></div>
+
+<script>
+    function countVowels(){
+        // Selecting the input element and get its value
+        var inputVal = document.getElementById("userInput").value;
+        var vowels = {a: 0, e: 0, i: 0, o: 0, u: 0};
+        for(var match in vowels) {
+            for (var i = 0; i < inputVal.length; i++) {
+                if (match == inputVal.charAt(i)) {
+                    vowels[match] += 1
+                }
+            }
+            var node = document.createElement("p")
+            var textnode = document.createTextNode(match + ": " + vowels[match]);       
+            node.appendChild(textnode);    
+            document.getElementById("output").appendChild(node)
+        }
+     
+    }
+
+</script>
+</body>
+</html>
