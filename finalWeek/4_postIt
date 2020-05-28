@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post-it Note Transformer</title>
+    
+    <style>
+        
+        .container{
+            width: 400px;
+            height: 300px;
+            margin: 80px auto;
+            background: rgb(245, 233, 144);
+        }
+        .container h1{
+            margin: 5px;
+            padding: 3px;
+            font-family: arial;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+    </style>
+    
+    <script>
+    function transformText(){
+        var inputVal = document.getElementById("userInput").value;
+        document.getElementById("postit").innerHTML = inputVal
+    }
+	</script>
+</head>
+
+<body>
+<h1>
+Post-it Note Transformer
+</h1>
+
+<label for="userInput">Input a word:</label><br>
+<input type="text" id="userInput">
+<button type="button" onclick="transformText();">View on Post-it</button>
+
+<div class="container">
+<h1 id="postit"></h1>
+</div>
+</body>
+
+</html>
