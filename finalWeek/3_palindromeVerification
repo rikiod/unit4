@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Verification</title>
+    
+	<script>
+    function checkPalindrome(){
+        var inputWord = document.getElementById("wordCheck").value;
+        var backwards = ""
+        for (var i = 0; i < inputWord.length; i++) {
+            backwards += inputWord.charAt(inputWord.length - 1 - i) }
+        if (backwards === inputWord) {
+            document.getElementById("result").innerHTML = "This word is a palindrome."
+        }
+        else {
+            document.getElementById("result").innerHTML = "This word is not a palindrome."
+        }
+    }
+	</script>
+    
+</head>
+<body>
+<h1>
+    Palindrome Verification
+</h1>
+
+<label for="text">Input:</label><br>
+<input type="text" id="wordCheck">
+<button type="button" onclick="checkPalindrome();">Verify</button>
+<p id = "result"></p>
+
+
+
+</body>
+</html>
